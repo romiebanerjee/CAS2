@@ -88,17 +88,6 @@ The maximal gap proof is a counting argument. $\mathrm{GL}(n,2)$ has at most $2^
 
 There's an HTML edition of CAS II with interactive figures of cells, orbits, types and placements on the 3- and 4-cubes.
 
-## Why LessWrong readers might care
-
-**Symmetry is an inductive bias, and inductive biases have blind spots you can prove.** Equivariant architectures, conservation-law priors and "look for invariances" heuristics all bet that data's structure is symmetric. CAS II gives one way to quantify that bet. The gap $\mathrm{soph}^G(x) - \mathrm{soph}(x)$ measures how much simple structure a symmetry-based learner is structurally unable to see. The maximal gap theorem says this gap can be as large as possible, for strings that are otherwise as well-behaved as strings get.
-
-**The searchability trade-off is general.** The slogan from CAS II is that *a coordinate system in which the space of symmetry hypotheses is small enough to search is small enough to miss simple structure.* For the full permutation group, search is complete but the hypotheses stop being meaningfully symmetric; you are searching arbitrary finite sets under another name. For matrix groups, search is feasible but blind. I suspect this pattern, completeness versus tractability of a structured hypothesis class, shows up well beyond symmetry.
-
-**Failure to find a pattern is not evidence of randomness.** If a symmetric search finds no good model, the right conclusion is "$x$ has little symmetric structure", not "$x$ is random". The blind strings are stochastic and normal, with simple, computable sufficient statistics. I'd argue a symmetry-based method should report *how much* of the structure it explains, as a deficiency against a compressor's estimate of $C(x)$, rather than claiming to report "the structure".
-
-**The common failure is blindness, not strangeness.** Strange, non-stochastic strings are rare. But a symmetric family has only $2^{\mathrm{poly}(n)}$ cells, so blindness to symmetry is plausibly common among ordinary stochastic strings. In practice the gap between symmetric and arbitrary models, not the gap between computable and uncomputable ones, looks like the dominant limitation.
-
-**Where this is going.** Later papers in the series develop learned search over orbit models, first with reinforcement learning and then guided by LLMs. CAS II is meant to make that search well posed: types and placements give the state space, relabelling, restriction and meets give the moves, and the symmetric structure function gives the objective.
 
 ## Open problems and how to engage
 
